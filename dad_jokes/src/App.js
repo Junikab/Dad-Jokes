@@ -1,12 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import JokesList from './JokesList';
+import JokeList from "./JokeList";
 
 function App() {
   return (
-    <div className="App">
-     <JokesList/>
-    </div>
+      <div className="App">
+          <JokeList />
+      </div>
   );
 }
 
