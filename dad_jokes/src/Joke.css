@@ -35,15 +35,75 @@
 }
 
 .fa-arrow-up, .fa-arrow-down{
-    font-size: 1.2em;
+    font-size: 1.5em;
     cursor: pointer;
     margin: 10px;
+    transition: all 0.3s;
+}
+@keyframes move-up {
+  0%,
+  50%,
+  100% {
+    transform: translateY(0);
+  }
+  25%,
+  75% {
+    transform: translateY(-3px);
+  }
+}
+.fa-arrow-up:hover{
+    animation: move-up;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-out;
+    color: #4CAF50;
+}
+
+@keyframes move-down {
+  0%,
+  50%,
+  100% {
+    transform: translateY(0);
+  }
+  25%,
+  75% {
+    transform: translateY(3px);
+  }
+}
+.fa-arrow-down:hover{
+     animation: move-down;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-out;
+    color: #f44336;
 }
 
 .Joke_smileIcon{
     font-size: 3rem;
     margin-left: auto;
     border-radius: 50%;
-    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1);    
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1);
+}
 
+.Joke_smileIcon:hover{
+   animation: spin;
+   animation-duration: 0.7s;
+   animation-timing-function: ease-in-out;
+   animation-delay: 0s; 
+}
+
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    30%{
+        transform: rotate(20deg);
+    }
+    60%{
+        transform: rotate(0deg);
+    }
+    80%{
+        transform: rotate(10deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
 }
